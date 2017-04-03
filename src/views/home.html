@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Welcome!
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>Oh Hi!</h1>
+    <p>
+        This awesome demo will (hopefully) show you how you can use the Pub/Sub pattern as a means of communicating
+        events between your services.
+    </p>
+    <p>
+        <a class="btn btn-success btn-lg" href="{{ path_for('signup') }}" role="button">Sign Up</a>
+        <a class="btn btn-info btn-lg" href="{{ path_for('login') }}" role="button">Login</a>
+    </p>
+</div>
+
+<button type="button" class="btn btn-danger btn-lg btn-block" id="jsButtonTheBigRedButton">The Big Red Button</button>
+
+{% endblock %}

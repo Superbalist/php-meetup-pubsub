@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block breadcrumbs %}
+<ol class="breadcrumb">
+    <li><a href="{{ path_for('home') }}">Home</a></li>
+    <li class="active">About</li>
+</ol>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>About</h1>
+</div>
+
+<h4>The Demo</h4>
+<p>This demo is built using:</p>
+<ul>
+    <li><a href="https://www.slimframework.com" target="_blank">Slim Framework</a></li>
+    <li><a href="http://getbootstrap.com" target="_blank">Bootstrap</a></li>
+    <li><a href="https://github.com/Superbalist/php-event-pubsub" target="_blank">superbalist/php-event-pubsub package</a></li>
+    <li><a href="https://github.com/Superbalist/php-pubsub-redis" target="_blank">superbalist/php-pubsub-redis package</a></li>
+</ul>
+
+<hr>
+
+<h4>Pub/Sub Packages</h4>
+<p>You can find all of our open-source pub/sub contributions here:</p>
+<table class="table table-bordered table-condensed">
+    <tr>
+        <td><a href="https://github.com/Superbalist/php-pubsub" target="_blank">php-pubsub</a></td>
+        <td>A PHP abstraction for the pub-sub pattern</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Superbalist/php-pubsub-redis" target="_blank">php-pubsub-redis</a></td>
+        <td>A Redis adapter for the php-pubsub package</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Superbalist/php-pubsub-kafka" target="_blank">php-pubsub-kafka</a></td>
+        <td>A Kafka adapter for the php-pubsub package</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Superbalist/php-pubsub-google-cloud" target="_blank">php-pubsub-google-cloud</a></td>
+        <td>A Google Cloud adapter for the php-pubsub package</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Superbalist/laravel-pubsub" target="_blank">laravel-pubsub</a></td>
+        <td>A Pub-Sub abstraction for Laravel</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Superbalist/laravel4-pubsub" target="_blank">laravel4-pubsub</a></td>
+        <td>A Pub-Sub abstraction for Laravel 4</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Superbalist/php-event-pubsub" target="_blank">php-event-pubsub</a></td>
+        <td>An event protocol and implementation over pub/sub</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Superbalist/laravel-event-pubsub" target="_blank">laravel-event-pubsub</a></td>
+        <td>An event protocol and implementation over pub/sub for Laravel</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Superbalist/laravel4-event-pubsub" target="_blank">laravel4-event-pubsub</a></td>
+        <td>An event protocol and implementation over pub/sub for Laravel 4</td>
+    </tr>
+</table>
+
+<hr>
+
+<h4>Get In Touch</h4>
+<div class="text-center">
+    <a href="https://github.com/Superbalist" target="_blank" class="social-icon">
+        <img src="/assets/images/github.svg">
+    </a>
+    <a href="https://www.linkedin.com/company/superbalist-com" target="_blank" class="social-icon">
+        <img src="/assets/images/linkedin.svg">
+    </a>
+    <a href="https://www.facebook.com/Superbalist" target="_blank" class="social-icon">
+        <img src="/assets/images/facebook.svg">
+    </a>
+    <a href="https://twitter.com/superbalist" target="_blank" class="social-icon">
+        <img src="/assets/images/twitter.svg">
+    </a>
+    <a href="https://www.instagram.com/superbalist" target="_blank" class="social-icon">
+        <img src="/assets/images/instagram.svg">
+    </a>
+</div>
+{% endblock %}

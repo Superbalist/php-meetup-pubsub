@@ -1,0 +1,35 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/public;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    # remove trailing slash
+    if (!-d $request_filename) {
+        rewrite ^/(.+)/$ /$1 permanent;
+    }
+
+    # forbid access through front controller - must use friendly paths
+    if ($request_uri ~* "^/index\.php/?(.*)$") {
+        return 301 /$1;
+    }
+
+    # use php-fpm as backend for .php
+    location ~ \.php$ {
+        fastcgi_pass localhost:9000;
+        fastcgi_index index.php;
+        fastcgi_split_path_info ^(.+\.php)(.*)$;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
+        include fastcgi_params;
+    }
+
+    location ~* ^.+\.js$ {
+        expires -1;
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "http://json-schema.org/draft-04/schema#",
+  "title": "browser/click/1.0",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89aAbB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+    },
+    "service": {
+      "type": "string"
+    },
+    "hostname": {
+      "type": "string"
+    },
+    "element": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "user_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "date",
+    "uuid",
+    "service",
+    "hostname",
+    "element",
+    "target",
+    "url",
+    "user_id"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "http://json-schema.org/draft-04/schema#",
+  "title": "user/1.0",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "email",
+    "first_name",
+    "last_name"
+  ]
+}

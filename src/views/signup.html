@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Sign Up
+{% endblock %}
+
+{% block breadcrumbs %}
+<ol class="breadcrumb">
+    <li><a href="{{ path_for('home') }}">Home</a></li>
+    <li class="active">Sign Up</li>
+</ol>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Sign Up</h1>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form method="POST" action="{{ path_for('post.signup') }}" class="form-horizontal">
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label"><span class="required">*</span> Email</label>
+                <div class="col-sm-6">
+                    <input type="email" name="email" class="form-control" id="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="first_name" class="col-sm-2 control-label"><span class="required">*</span> First Name</label>
+                <div class="col-sm-6">
+                    <input type="text" name="first_name" class="form-control" id="first_name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="last_name" class="col-sm-2 control-label">Last Name</label>
+                <div class="col-sm-6">
+                    <input type="text" name="last_name" class="form-control" id="last_name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-2 control-label"><span class="required">*</span> Password</label>
+                <div class="col-sm-6">
+                    <input type="password" name="password" class="form-control" id="password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

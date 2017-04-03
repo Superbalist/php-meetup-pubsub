@@ -1,0 +1,28 @@
+{
+  "name": "superbalist/php-meetup-pubsub",
+  "description": "A demo showcasing Pub/Sub in PHP",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Superbalist.com a division of Takealot Online (Pty) Ltd",
+      "email": "info@superbalist.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "slim/slim": "^3.0",
+    "slim/twig-view": "^2.2",
+    "davidepastore/slim-validation": "^0.5.0",
+    "slim/flash": "^0.2.0",
+    "kanellov/slim-twig-flash": "^0.2.0",
+    "superbalist/php-event-pubsub": "^2.0",
+    "superbalist/php-pubsub-redis": "^1.0",
+    "symfony/var-dumper": "^3.2",
+    "fzaninotto/faker": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}

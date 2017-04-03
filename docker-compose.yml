@@ -1,0 +1,16 @@
+version: '2'
+services:
+  php-meetup-pubsub-web:
+    build: .
+    ports:
+      - "80:80"
+    depends_on:
+      - "php-meetup-pubsub-redis"
+    volumes:
+      - ./src/app:/var/www/app
+      - ./src/public:/var/www/public
+      - ./src/views:/var/www/views
+    extra_hosts:
+     - "php-meetup-pubsub.dev:127.0.0.1"
+  php-meetup-pubsub-redis:
+    image: redis:3.0.7

@@ -1,0 +1,16 @@
+body {
+    padding-top: 50px;
+}
+
+.content {
+    padding: 20px 15px;
+}
+
+.control-label .required {
+    color: #EA360F;
+    font-size: 15px;
+}
+
+.social-icon {
+    margin-right: 20px;
+}
